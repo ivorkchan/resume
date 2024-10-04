@@ -1,22 +1,21 @@
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage{marvosym}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
 \usepackage[empty]{fullpage}
 \usepackage{fancyhdr}
-\usepackage[usenames,dvipsnames]{color}
 \usepackage{titlesec}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\input{glyphtounicode}
+
+\pdfgentounicode=1
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -32,34 +31,34 @@
 \setlength{\footskip}{0.5in}
 
 \urlstyle{same}
-\pdfgentounicode=1
+
+\setlist[itemize]{itemsep=0pt, topsep=0pt}
+
+\titlespacing*{\section}{0pt}{8pt}{8pt}
 
 \titleformat{\section}{
   \scshape\raggedright\large
 }{}{0em}{}[\titlerule]
 
-\titlespacing*{\section}{0pt}{0pt}{8pt}
-
 \newcommand{\resumeSubheading}[4]{
   \item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & {#2} \\
       \textit{\small{#3}} & \textit{\small{#4}}
     \end{tabular*}
-    \vspace{-12pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item \vspace{-2pt}
+    \item
     \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
       \small{#1} & {#2}
     \end{tabular*}
-    \vspace{-18pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}\small}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 \newcommand{\resumeItem}[1]{
@@ -69,7 +68,6 @@
 \renewcommand\labelitemii{\(\vcenter{\hbox{\tiny\(\bullet\)}}\)}
 
 %-------------------------------------------
-
 \begin{document}
 
 % Contact
@@ -91,12 +89,10 @@
 {Bachelor of Engineering in Industrial Design}{Sep. 2015 -- Jul. 2019}
 \resumeSubHeadingListEnd
 
-\vspace{6pt}
-
 % Skills
 \section{Skills}
-\resumeSubHeadingListStart
-\small{\item{
+\resumeSubHeadingListStart \small
+{\item{
               \textbf{Languages}{: Python, Java, C, HTML/CSS, JavaScript/TypeScript, SQL} \\
               \textbf{Frameworks/Tools}{: React, Next.js, Tailwind CSS, Node.js, GraphQL, MongoDB, Git, Docker, AWS/Azure, Shell, Vim, Regular Expression, Arduino, Processing} \\
               \textbf{Design}{: Office Suite, Adobe Suite, Figma, Sketch, Rhino, Grasshopper, Maya, 3ds Max, AutoCAD} \\
@@ -106,8 +102,8 @@
 
 % Certificates
 % \section{Certificates}
-% \resumeSubHeadingListStart
-% \small{\item{
+% \resumeSubHeadingListStart \small
+% {\item{
 %               \textbf{Front-End}{: Meta Front-End Developer Professional Certificate} \\
 %               \textbf{Back-End}{: Meta Back-End Developer Professional Certificate}
 %         }}
@@ -123,7 +119,6 @@
 \resumeItem{Built a \textbf{responsive} personal blog website using \textbf{Next.js}, focusing on delivering a smooth user experience and modern design aesthetics.}
 \resumeItem{Implemented \textbf{Contentlayer} for efficient \textbf{data handling}, streamlining content management within the site.}
 \resumeItem{Utilized \textbf{Tailwind CSS} and \textbf{Framer Motion} for frontend design, creating a dynamic user interface with responsive animations.}
-% \resumeItem{Optimized \textbf{page rendering} by splitting \textbf{font files}, ensuring faster load times and improved performance.}
 \resumeItemListEnd
 
 \resumeProjectHeading
@@ -132,7 +127,6 @@
 \resumeItem{Developed a \textbf{book, movie, and music collection showcase} website using \textbf{Next.js}, offering a seamless platform for users to view their collections.}
 \resumeItem{Integrated a \textbf{personal API from NeoDB} to fetch and display user-specific data, enhancing the interactivity and personalization of the site.}
 \resumeItem{Utilized \textbf{React SWR} to automatically retrieve and update user data, providing real-time information.}
-% \resumeItem{Incorporated \textbf{responsive design}, ensuring the site is fully functional across devices.}
 \resumeItemListEnd
 
 \resumeProjectHeading
@@ -140,7 +134,6 @@
 \resumeItemListStart
 \resumeItem{Developed a \textbf{parametric spatial design solution}, using \textbf{Processing} and \textbf{Max/MSP} to simulate \textbf{metaball forms} and combine them with functional requirements.}
 \resumeItem{Programmed in \textbf{Grasshopper} to automate the generation of \textbf{spatial layouts}, incorporating parameters such as shape, size, and functional needs of the interior space.}
-\resumeItem{Awarded \textbf{Best Product Award} in the UNIQLO Design Competition.}
 \resumeItemListEnd
 
 \resumeProjectHeading
@@ -159,11 +152,10 @@
 \resumeSubheading
 {Research Assistant}{Chongqing, China}
 {Chongqing University}{Jan. 2021 -- Mar. 2022}
-\vspace{4pt}
 \resumeItemListStart
-\resumeItem{Developed a demo integrating regional geographic information and conducting spatial asset analysis utilizing \textbf{GIS}, \textbf{NetMiner}, and \textbf{SPSS}.}
-\resumeItem{Participated in a national fund research project and a provincial fund research project, co-authored five papers, and contributed to one historical building protection project and two urban planning projects.}
-\resumeItem{Attended three academic conferences and co-published one conference paper.}
+\resumeItem{Developed a demo integrating geographic information and spatial asset analysis utilizing \textbf{GIS}, \textbf{NetMiner}, and \textbf{SPSS}, and completed a pilot project in a historical preservation area with \textbf{over 200 households}.}
+\resumeItem{Collaborated with interdisciplinary colleagues in human geography, statistics, and computer science to contribute to both a \textbf{nationally funded research project} and a \textbf{provincially funded project}. Played a key role in co-authoring \textbf{five academic papers}, conducting user research, and developing design concepts for \textbf{three urban planning projects}.}
+\resumeItem{Actively participated in \textbf{three academic conferences} on urban planning, co-authored and presented a \textbf{conference paper}, sharing insights on current industry trends and innovations.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
